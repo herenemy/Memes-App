@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="resources/meme_doge_dog.png">
+    <title>Memes app</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="memes-app__inner">
+            <div class="memes-app__row">
+                <div class="memes-app__col">
+                    <h2 class="block__title">Настройки:</h2>
+                    <div class="select-meme__block">
+                        <h4 class="meme__title">Мем</h4>
+                        <select name="" id="js-meme-options" class="input"></select>
+                    </div>
+
+                    <div class="select-meme__block">
+                        <h4 class="meme__title">Текст сверху</h4>
+                        <input type="text" id="js-select-meme__text-top" class="input select-meme__text-top" maxlength="41">
+                        <select name="" id="js-text-color__top" class="input">
+                            <option value="#fff">Белый</option>
+                            <option value="#000">Черный</option>
+                        </select>
+                        <p class="length-validation length-validation__top"></p>
+                    </div>
+
+                    <div class="select-meme__block">
+                        <h4 class="meme__title">Текст снизу</h4>
+                        <input type="text" id="js-select-meme__text-bottom" class="input select-meme__text-bottom" maxlength="41">
+                        <select name="" id="js-text-color__bottom" class="input">
+                            <option value="#fff">Белый</option>
+                            <option value="#000">Черный</option>
+                        </select>
+                        <p class="length-validation length-validation__bottom"></p>
+                    </div>
+                </div>
+
+                <div class="memes-app__col">
+                    <h2 class="block__title">Превью:</h2>
+                    <div class="img-block__wrapper">
+                        <div id="js-img-block" class="img-block"></div>
+                            <div class="img-block__text-wrapper">
+                                <p id="img-block__text-top" class="img-block__text-top"></p>
+                                <p id="img-block__text-bottom" class="img-block__text-bottom"></p>
+                            </div>
+                        </div>
+
+                </div>
+                <!-- /.memes-app__col -->
+            </div>
+            <!-- /.memes-app__row -->
+        </div>
+        <!-- /.memes-app__inner -->
+    </div>
+    <!-- /.container -->
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
