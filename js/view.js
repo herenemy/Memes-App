@@ -72,13 +72,15 @@ class View {
   }
 
   handleInputTextTop = () => {
+    console.log(this.inputTopTextNode.value.length);
+
     this.memeImageTopTextNode.innerText = this.inputTopTextNode.value;
-    if (this.inputTopTextNode.value.length > 40) {
+    if (this.inputTopTextNode.value.length > 69) {
       this.inputTopLengthValidationNode.classList.add(
         'length-validation_active'
       );
       this.inputTopLengthValidationNode.innerText =
-        'Максимальная длина текста 40 символов';
+        'Максимальная длина текста 70 символов';
     } else {
       this.inputTopLengthValidationNode.classList.remove(
         'length-validation_active'
@@ -89,12 +91,12 @@ class View {
 
   handleInputTextBottom = () => {
     this.memeImageBottomTextNode.innerText = this.inputBottomTextNode.value;
-    if (this.inputBottomTextNode.value.length > 40) {
+    if (this.inputBottomTextNode.value.length > 69) {
       this.inputBottomLengthValidationNode.classList.add(
         'length-validation_active'
       );
       this.inputBottomLengthValidationNode.innerText =
-        'Максимальная длина текста 40 символов';
+        'Максимальная длина текста 70 символов';
     } else {
       this.inputBottomLengthValidationNode.classList.remove(
         'length-validation_active'
